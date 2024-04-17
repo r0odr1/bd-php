@@ -7,14 +7,18 @@ function obtener_servicios() {
 
     // 2. Consulta SQL
     $sql = "SELECT * FROM servicios;";
+    //$sql = "SELECT * FROM servicios LIMIT 5;";
+
 
     // 3. Realizar la consulta
     $consulta = mysqli_query($db, $sql);
 
+    return $consulta;
+
     // 4. Acceder a los resultados
-    echo "<pre>";
-    var_dump(mysqli_fetch_assoc($consulta));
-    echo "</pre>";
+    // echo "<pre>";
+    // var_dump(mysqli_fetch_assoc($consulta));
+    // echo "</pre>";
 
     // 5. Cerrar la conecion (opcional)
     // $resultado = mysqli_close($db);
